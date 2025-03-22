@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="FOM TAWOUE GABIN">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio | Projet 3 : Temps réel</title>
+    </head>
+    <body>
+        <h1>Temps réel</h1>
+
+        <label for="timeInput">Heure actuelle :</label>
+    <input type="text" id="timeInput" readonly>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+            document.getElementById('timeInput').value = formattedTime;
+
+            setTimeout(updateTime, 1000);
+        }
+
+        updateTime();
+    </script>
+    </body>
+</html>

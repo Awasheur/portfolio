@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="FOM TAWOUE GABIN">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio | Projet 1 : Calculateur de prêt hypothécaire</title>
+    </head>
+    <body>
+        <h1>Calculateur de prêt hypothécaire</h1>
+
+        <label for="loanAmount">Montant du prêt :</label>
+    <input type="number" id="loanAmount" placeholder="Entrez une valeur positive">
+    <br>
+    <label for="interestRate">Taux d'intérêt annuel (%) :</label>
+    <input type="number" id="interestRate" placeholder="Entrez une valeur  positive">
+    <br>
+    <label for="loanTerm">Durée du prêt (années) :</label>
+    <input type="number" id="loanTerm" placeholder="Entrez une valeur positive">
+    <br>
+    <button onclick="calculateMonthlyPayment()">Calculer le paiement mensuel</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateMonthlyPayment() {
+            const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value);
+            const loanTerm = parseFloat(document.getElementById('loanTerm').value);
+
+            if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm) || loanAmount<0 || interestRate<0 || loanTerm<0) {
+                
+                alert("Veuillez saisir des valeurs valides.");
+                return;
+            }
+
+            const monthlyInterestRate = (interestRate / 100) / 12;
+
+            const numberOfPayments = loanTerm * 12;
+
+            const monthlyPayment =
+                (loanAmount * monthlyInterestRate) /
+                (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+
+            if (isFinite(monthlyPayment)) {
+                document.getElementById('result').textContent =
+                    `Paiement mensuel : €${monthlyPayment.toFixed(2)}`;
+            } else {
+                alert("Calcul impossible. Vérifiez les valeurs saisies.");
+            }
+        }
+    </script>
+    </body>
+</html>
