@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="keywords" content="Portfolio">
+        <meta name="author" content="FOM TAWOUE GABIN">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <header>
+        <h1>FOM TAWOUE <span style ="color: rgb(40, 195, 195)">GABIN</span></h1>
+        <nav>
+          <ul>
+            <li><a href="#home" class="lien-anime" style ="color: teal">Accueil</a></li>
+            <li><a href="#about" class="lien-anime">À propos</a></li>
+            <li><a href="#projects" class="lien-anime">Projets</a></li>
+            <li><a href="#competences" class="lien-anime">Compétences</a></li>
+            <li><a href="#contact" class="lien-anime">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+    <body>
+        <div id="home">
+            <div id="body">
+                <div id="divbody1">
+                    <div>
+                        <p id="bodyp" class="text-anime">Je suis <span style ="color: rgb(40, 195, 195)">Gabin</span>, Développeur en devenir 
+                        </br>passionné par le web et le design !</p>
+                    </div>
+                    <div class="button">
+                        <a href='#projects' class="bouton">Voir mes projets</a>
+                      </div>
+                </div>
+                
+                <div>
+                    <img src="image acceuil.png" alt="Image d'un développeur web" class="image">
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <h2>À propos</h2>
+            <div id="body">
+            
+                <div id="divbody1">
+                    <div>
+                        <p id="aboutp">Je m'appelle <span style ="color: rgb(40, 195, 195)">FOM TAWOUE GABIN</span>, passionné par la création des sites web modernes et interactifs.</br>
+                        </br>Je suis actuellement étudiant en <span style ="color: rgb(40, 195, 195)">développement web</span>, et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</br>
+                        </br>J'adore transformer mes idées en projets concrets et expérimenter avec les nouvelles technologies.</p>
+                    </div>
+                    <div>
+                        <a href="CV_FOM_TAWOUE_GABIN.zip" download class="bouton">Télécharger mon CV</a>
+                    </div>
+                </div>
+            
+                <div>
+                    <img src="photo.jpg" alt="Photo de l'auteur" class="photo">
+                </div>
+            </div>
+        </div>
+        
+        <div id="projects">
+            <h2>Mes projets</h2>
+            <div class="bodyprojects">
+                <div class="divbody1" onmouseover="zoomer(this)" onmouseout="dezoomer(this)">
+                    <div>
+                        <p class="bodyp">
+                        Un petit programme qui calcule le montant mensuel d'un prêt hypothécaire.</br></br></br>
+                        #html, #css, #js
+                        </p>
+                    </div>
+                    <div class="button">
+                        <a href='Projets/calculateur.html' class="bouton">Voir</a>
+                    </div>
+                </div>
+                <div class="divbody1" onmouseover="zoomer(this)" onmouseout="dezoomer(this)">
+                    <div>
+                        <p class="bodyp"> 
+                        Un petit programme qui vous donne des résultats en fonction des nombres que vous entrez.</br></br></br>
+                        #html, #css, #js
+                        </p>
+                    </div>
+                    <div class="button">
+                        <a href='projets/controle_nombres_JS.html' class="bouton">Voir</a>
+                    </div>
+                </div>
+                <div class="divbody1" onmouseover="zoomer(this)" onmouseout="dezoomer(this)">
+                    <div>
+                        <p class="bodyp">Une mini horloge qui affiche l'heure en temps réel.</br></br></br>
+                        #html, #css, #js
+                        </p>
+                    </div>
+                    <div class="button">
+                        <a href='projets/temps_reel.html' class="bouton">Voir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="competences">
+            <h2 style="color: black;">Mes Compétences</h2>
+            <div class="bodycompetences">
+                <div class="divbody1" style="background-color: white;">
+                    <h3>Soft Skills</h3>
+                    <div class="labelprogression">
+                        <label for="gestion">Gestion de projets</label></br>
+                        <progress id="gestion" value="72" max="100" class="progression">72%</progress></br>
+                        <label for="equipe">Travail en équipe</label></br>
+                        <progress id="equipe" value="80" max="100" class="progression">80%</progress></br>
+                        <label for="communication">Communication</label></br>
+                        <progress id="communication" value="75" max="100" class="progression">75%</progress></br>
+                        <label for="adaptabilite">Adaptabilité</label></br>
+                        <progress id="adaptabilite" value="77" max="100" class="progression">77%</progress></br>
+                    </div>
+                </div>
+                <div class="divbody1" style="background-color: white;">
+                    <h3>Hard Skills</h3>
+                    <div class="labelprogression">
+                        <label for="progressionhtml">HTML</label></br>
+                        <progress id="progressionhtml" value="53" max="100" class="progression">53%</progress></br>
+                        <label for="progressioncss">CSS</label></br>
+                        <progress id="progressioncss" value="47" max="100" class="progression">47%</progress></br>
+                        <label for="progressionjs">JavaScript</label></br>
+                        <progress id="progressionjs" value="40" max="100" class="progression">40%</progress></br>
+                        <label for="progressionvsc">VS Code</label></br>
+                        <progress id="progressionvsc" value="55" max="100" class="progression">55%</progress></br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <p class="contactp"><span style="font-weight: bold;">Vous avez un <span style="color: rgb(40, 195, 195);">projet en tête ?</span></span></br>
+                N'hésitez pas à me <span style="color: rgb(40, 195, 195); font-weight: bold;">contacter</span>
+            </p>
+            <form action="" method="get">
+                <div class="divform1">
+                    <div class="box1">
+                        <label for="prenom">Votre prénom</label></br>
+                        <input type="text" id="prenom" name="prenom" placeholder="Martin" required>
+                    </div>
+                    <div class="box1">
+                        <label for="nom">Votre nom</label></br>
+                        <input type="text" id="nom" name="nom" placeholder="Matin" required>
+                    </div>
+                </div>
+                <div class="divform2">
+                    <div class="box2">
+                        <label for="sujet">Votre sujet</label></br>
+                        <input type="text" id="sujet" name="sujet" placeholder="Développement d'un site vitrine" required></br>
+                    </div>
+                    <div class="box2">
+                        <textarea placeholder="Écrivez votre message ici"></textarea>
+                    </div>
+                </div>
+                    
+                <div class="button">
+                    <button type="submit" class="bouton-bordure-blanc">Envoyer</button>
+                </div>
+            </form>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+    <footer>
+        <div>
+            <p>Designed by <span style ="color: rgb(40, 195, 195)">GABIN</span> with HTML CSS JS</p>
+        </div>
+        <div>
+            <p>Tous droits réservés - 2025</p>
+        </div>
+    </footer>
+    
+</html>
